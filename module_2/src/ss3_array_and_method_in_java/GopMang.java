@@ -20,15 +20,12 @@ public class GopMang {
             arr2[i] = Integer.parseInt(scanner.nextLine());
         }
         int[] arr3 = new int[n + m];
-        for (int i = 0; i < arr1.length; i++) {
-            arr3[i] = arr1[i];
-        }
-        for (int i = arr1.length; i < arr3.length; i++) {
-            arr3[i] = arr2[i - arr1.length];
-        }
+        System.arraycopy(arr1, 0, arr3, 0, arr1.length);
+        if (arr3.length - arr1.length >= 0)
+            System.arraycopy(arr2, 0, arr3, arr1.length, arr3.length - arr1.length);
         System.out.println("Các phần tử trong mảng thứ ba là: ");
-        for (int i = 0; i < arr3.length; i++) {
-            System.out.print(arr3[i] + " ");
+        for (int j : arr3) {
+            System.out.print(j + " ");
         }
     }
 }

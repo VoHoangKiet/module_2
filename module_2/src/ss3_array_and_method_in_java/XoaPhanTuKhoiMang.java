@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 public class XoaPhanTuKhoiMang {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a size:");
+        Scanner scanner = new Scanner(System.in);
         int size = scanner.nextInt();
         int[] arr;
         arr = new int[size];
